@@ -92,7 +92,7 @@ At this point, you should have an additional environment in addition to your bas
 
 and you should see base and alphafold there.
 
-### Optional: install the integrative modeling platformù
+### Optional: install the integrative modeling platform
 
 We will also work with the integrative modeling platform, IMP (www.integrativemodeling.org). This can be installed in a separate anaconda environment
 
