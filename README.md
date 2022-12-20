@@ -1,5 +1,34 @@
 ## Alphafold configuration and tutorial IEO
 
+### basic command cheat sheet
+
+| command | Description               |
+|---------|---------------------------|
+| cd      | change directory          |
+| pwd     | show me current directory |
+| ls      | list files                |
+| chmod   | change permissions        |
+| mkdir   | create directory          |
+| cp      | copy files                |
+| rm      | delete files              |
+
+options for each commmands are given as "flags" i.e. - signs after the command
+
+    cp -r onedir another 
+
+will copy a folder named "onedir" into a folder named "another" recursively (-r), meaning it will copy all the contents of onedir.
+
+Places can be specified with paths or some shorthand locations
+
+| location | meaning                       | example command |
+|----------|-------------------------------|-----------------|
+| ~        | home directory                | cd ~            |  
+| ./       | current directory             | ls ./           |
+| ../      | one directory up              | cd ../          | 
+| /        | the top of the directory tree | ls /          | 
+
+In general, just do [this tutorial](https://ubuntu.com/tutorials/command-line-for-beginners#4-creating-folders-and-files0), especially sections 4-6 . 
+
 ### installation of anaconda and configuration
 
 Login onto the workstation, open your browser and go to
@@ -40,7 +69,11 @@ Finish configuring by disabling autostart of anaconda.
 
 ### Those that already have anaconda can start here
 
-From this github repository, download the file containing the package list for the alphafold environment into your software directory
+If you do not see the word (base) before your prompt in the terminal, activate anaconda
+
+    conda activate
+
+Download the file containing the package list for the alphafold environment into your software directory
 
     cd /data/username/software/
 
@@ -71,7 +104,7 @@ and install imp from the channel conda-forge (a community maintained set of tool
 
     conda install -c conda-forge imp
 
-now you should have 3 anaconda environments: base, alphafold and imp.
+now you should have 3 anaconda environments: base, alphafold and imp. Any further work in integrative modeling will make use of imp.
 
 ### Running Alphafold
 
