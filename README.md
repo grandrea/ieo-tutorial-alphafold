@@ -1,6 +1,8 @@
 ## Alphafold configuration and tutorial IEO
 
 ### basic command cheat sheet
+This is more of a reference, to start the stuff you need to do to configure the environment for alphafold, jump to the next section.
+
 
 | command | Description               |
 |---------|---------------------------|
