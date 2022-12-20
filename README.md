@@ -44,6 +44,11 @@ From this github repository, download the file containing the package list for t
 
     cd /data/username/software/
 
-git clone XXXX
+    wget 
 
-conda env create -f alphafold_env.yml
+Then, create an environment called "alphafold" from the package list in the .yml file you just downloaded
+
+    conda env create -f alphafold_env.yml
+
+
+At this point, y
