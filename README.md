@@ -95,7 +95,7 @@ At this point, you should have an additional environment in addition to your bas
 
 and you should see base and alphafold there.
 
-#### Download tools to analyse and visualize alphafold results
+### Download tools to analyse and visualize alphafold results
 
 install pymol in the workstation in the alphafold environment
 
