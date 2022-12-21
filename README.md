@@ -95,6 +95,22 @@ At this point, you should have an additional environment in addition to your bas
 
 and you should see base and alphafold there.
 
+#### Download tools to analyse and visualize alphafold results
+
+install pymol in the workstation in the alphafold environment
+
+     conda activate alphafold
+     conda install -c conda-forge pymol-open-source 
+
+download the scripts to plot and analyse AF results. Go to your software directory
+
+    cd /data/username/software
+
+and download the scripts
+
+    git clone https://github.com/grandrea/Alphafold-analysis
+
+
 ### Optional: install the integrative modeling platform
 
 We will also work with the integrative modeling platform, IMP (www.integrativemodeling.org). This can be installed in a separate anaconda environment
@@ -188,3 +204,5 @@ You should be greeted by a message like:
 
 
 We can then set up our first AlphaFold run.
+
+
