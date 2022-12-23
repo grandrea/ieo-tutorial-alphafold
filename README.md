@@ -6,18 +6,19 @@
 This is more of a reference, to start the stuff you need to do to configure the environment for alphafold, jump to the next section.
 
 
-| command    | Description                |
-|------------|----------------------------|
-| cd         | change directory           |
-| pwd        | show me current directory  |
-| ls         | list files                 |
-| chmod      | change permissions         |
-| mkdir      | create directory           |
-| cp         | copy files                 |
-| rm         | delete files               |
-| ln -s      | create symbolic link       |
-| nvidia-smi | check gpu load             |
-| htop       | check processes and memory |
+| command          | Description                |
+|------------------|----------------------------|
+| cd               | change directory           |
+| pwd              | show me current directory  |
+| ls               | list files                 |
+| chmod            | change permissions         |
+| mkdir            | create directory           |
+| cp               | copy files                 |
+| rm               | delete files               |
+| mv               | move files or directories  |
+| ln -s            | create symbolic link       |
+| watch nvidia-smi | check gpu load             |
+| htop             | check processes and memory |
 
 options for each commmands are given as "flags" i.e. - signs after the command
 
