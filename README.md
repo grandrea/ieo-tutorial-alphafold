@@ -1,5 +1,7 @@
 ## Alphafold configuration and tutorial IEO
 
+
+
 ### basic command cheat sheet
 This is more of a reference, to start the stuff you need to do to configure the environment for alphafold, jump to the next section.
 
@@ -203,6 +205,35 @@ You should be greeted by a message like:
     Try --helpfull to get a list of all flags.
 
 
-We can then set up our first AlphaFold run.
+We can then set up our first AlphaFold run. First, create the output directory (here called "myrun) inside your alphafold_runs folder
 
+    mkdir /data/username/alphafold_runs/myrun
 
+then prepare your fasta file by putting it in alphafold_runs for example.
+
+Then execute alphafold. For multimers:
+
+    python docker/run_docker.py --fasta_paths=/path/to/my/fasta/myfasta.fasta  output_dir=/path/to//Nusg-RS10 --model_preset=multimer --max_template_date=2022-11-01 --data_dir=/data/software/dbs/ --gpu_devices=0 --num_predictions_per_model=2 --run_relax=False
+
+For monomers
+
+    python docker/run_docker.py --fasta_paths=/path/to/my/fasta/myfasta.fasta  output_dir=/path/to//Nusg-RS10 --model_preset=monomer_ptm --max_template_date=2022-11-01 --data_dir=/data/software/dbs/ --gpu_devices=0  --run_relax=False
+
+As explained in the help, run_relax enables final relaxation. This adjusts some side chain positions and fixes some steric clashes. it can add a lot of hours to your predictions, and i would disable it unless you plan to run something "final"
+
+The number in gpu_devices refers to a specific gpu. Use gpu_devices=0,1 for example to use both gpu 0 and gpu 1.
+
+Adjust templating behaviour by changing max_template date.
+
+### Analysing results
+
+In /data/software there is also a set of scripts to plot and analyse the alphafold run called AlphaFold-analysis. The usage instructions for that are [here](https://github.com/grandrea/Alphafold-analysis). You may need to install biopython by doing
+
+    conda install -c conda-forge biopython
+
+in your alphafold anaconda environment.
+Once you put your .fasta file in your results directory, you can run the analysis by doing
+
+    python plot_AF_all.py
+
+and you'll obtain a file with statistics, and plots for PAE and pLDDT. You can also make figures of the structure colored by pLDDT as described in the alphafold analysis instructions.
