@@ -131,6 +131,8 @@ now you should have 3 anaconda environments: base, alphafold and imp. Any furthe
 
 ### Running Alphafold
 
+Remeber, if your sequence is small (<1400 amino acids), you can run alphafold with no coding using alphafold-colab [here](https://colab.research.google.com/github/deepmind/alphafold/blob/main/notebooks/AlphaFold.ipynb)
+
 Alphafold is already configured on the workstation but you need some packages to run it, which is why we installed anaconda and installed some packages in a separate environment
 
 Activate the alphafold environment
