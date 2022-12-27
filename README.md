@@ -212,15 +212,16 @@ We can then set up our first AlphaFold run. First, create the output directory (
 
     mkdir /data/username/alphafold_runs/myrun
 
-then prepare your fasta file by putting it in alphafold_runs for example.
+then prepare your fasta file in your user directory.
 
 Then execute alphafold. For multimers:
 
-    python docker/run_docker.py --fasta_paths=/path/to/my/fasta/myfasta.fasta  output_dir=/path/to//Nusg-RS10 --model_preset=multimer --max_template_date=2022-11-01 --data_dir=/data/software/dbs/ --gpu_devices=0 --num_predictions_per_model=2 --run_relax=False
+    python docker/run_docker.py --fasta_paths=/path/to/my/fasta/myfasta.fasta  --output_dir=/path/to/myrun --model_preset=multimer --max_template_date=2022-11-01 --data_dir=/data/software/dbs/ --gpu_devices=0 --num_predictions_per_model=2 --run_relax=False
+
 
 For monomers
 
-    python docker/run_docker.py --fasta_paths=/path/to/my/fasta/myfasta.fasta  output_dir=/path/to//Nusg-RS10 --model_preset=monomer_ptm --max_template_date=2022-11-01 --data_dir=/data/software/dbs/ --gpu_devices=0  --run_relax=False
+    python docker/run_docker.py --fasta_paths=/path/to/my/fasta/myfasta.fasta  --output_dir=/path/to/myrun --model_preset=monomer_ptm --max_template_date=2022-11-01 --data_dir=/data/software/dbs/ --gpu_devices=0  --run_relax=False
 
 As explained in the help, run_relax enables final relaxation. This adjusts some side chain positions and fixes some steric clashes. it can add a lot of hours to your predictions, and i would disable it unless you plan to run something "final"
 
